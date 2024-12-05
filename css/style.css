@@ -1,0 +1,157 @@
+/* General styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    box-sizing: border-box;
+}
+
+/* Header and Navigation */
+.header {
+    background-color: #333;
+    padding: 1em 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.nav-bar {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;  /* Allow items to wrap on smaller screens */
+}
+
+.nav-bar li {
+    margin: 0 15px;
+}
+
+.nav-bar a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+.nav-bar a:hover,
+.nav-bar a.active {
+    color: #ffd700;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #ff9900, #ff6600);
+    color: white;
+    text-align: center;
+    padding: 4em 1em;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.hero h1 {
+    font-size: 4em;
+    margin-bottom: 0.5em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 1.5em;
+    margin: 1em 0;
+    font-weight: 300;
+}
+
+.hero h3 {
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+/* Gallery Section */
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 1.5em;
+    margin-top: 2em;
+    flex-wrap: wrap; /* Ensure images are responsive */
+}
+
+.gallery-img {
+    width: 250px;
+    height: 180px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Adding smooth transition effects */
+body {
+    transition: background-color 0.5s ease;
+}
+
+.nav-bar a {
+    transition: transform 0.3s ease;
+}
+
+.nav-bar a:hover {
+    transform: translateY(-5px);
+}
+
+/* Mobile responsiveness */
+@media only screen and (max-width: 768px) {
+    .nav-bar {
+        flex-direction: column;  /* Stack navigation links vertically */
+        align-items: center;
+    }
+
+    .nav-bar li {
+        margin: 10px 0;
+    }
+
+    .hero h1 {
+        font-size: 2.5em;  /* Adjust font size for small screens */
+    }
+
+    .hero p {
+        font-size: 1.2em;
+    }
+
+    .hero h3 {
+        font-size: 1.1em;
+    }
+
+    .gallery {
+        flex-direction: column; /* Stack gallery images vertically */
+        gap: 1em;
+    }
+
+    .gallery-img {
+        width: 90%;  /* Make images take up more space on mobile */
+        height: auto;
+    }
+}
+
+/* Larger screens */
+@media only screen and (max-width: 480px) {
+    .hero h1 {
+        font-size: 2em;  /* Make the heading even smaller on very small screens */
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    .gallery-img {
+        width: 100%;  /* Make images full-width on very small screens */
+        height: auto;
+    }
+}
